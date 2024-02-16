@@ -1,0 +1,128 @@
+Delivered-To: rodriguezybarrosfrancisco@gmail.com
+Received: by 2002:a05:6850:6b15:b0:554:6301:ee21 with SMTP id t21csp156833nnh;
+        Fri, 16 Feb 2024 12:10:56 -0800 (PST)
+X-Received: by 2002:a17:90a:de05:b0:298:e166:d841 with SMTP id m5-20020a17090ade0500b00298e166d841mr5280811pjv.30.1708114255972;
+        Fri, 16 Feb 2024 12:10:55 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1708114255; cv=none;
+        d=google.com; s=arc-20160816;
+        b=VKV2Gu/TwVOkpD1C5erT8btH7bf3OMxmO+sjsyFTX/ZizAkO55Y1z6ZTwxjDseC9NW
+         bqmSKT6nrHLj0cxrR/g1jW9LnsTr8KNZ2d6R2KNYtC6LgmXyZ8NlYFOGKWdKw9vCIrWI
+         yr8WHst+A4mAzMt1KChy4/3fzNOLqvUyiWK5Ij6o7dt0vD2KTmu290N75mGfR0J7/R51
+         bsDvrCof0tGpqZPEkQ/S5AMpMuG99IA4J/V1PLvEB98kCRHRiwx87b+/OhgeEXgZHjgZ
+         eAVi3VvsllXELD/RXxJMmYUZC3vultm9ZgpirFMcaGQ3hc99jVc+HgPtiVslX/kp9xQY
+         jbcQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=EjKY8AxOitR970Zrj4LrUaAaLqvkjQuUfIoG0QDJdbg=;
+        fh=GuoonK3VndkbjaNRexh8CadKCaGSBtWrW/qjOpWzR0c=;
+        b=N01KFN8l9Sg51+XiHhR1Q2dAglVW1os/CeJ5/SUn7ums5HciKV8gjp17QXhL75rkGn
+         lO6U3TZoEurFqJ+c7PVo0Og/0qysoxON/ZlWMBsNNNKI5X6yXtDltiJm01+aRGUfZ1ka
+         NFcDfLu5zJZeOXK+oPYHjTu4DchSHhqgYxbBvO98JY0g11tDSwT/pNy+bXH2Q2g9wYWj
+         /MV/dnxE78TUQ725iQKQfj9xnNZx9il1QqcYuC9gu+Qd6UVR0f7URwPjLl7W/2yDqBvj
+         dUMl5Bn55U0RZa3aUprtJ89ufAF+pcXr11z2g2rz+NTqsWtpC4Zz2y6JpXyvlXfTMqiv
+         DJig==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=hXfa1p+Y;
+       spf=pass (google.com: domain of franciscoryb1@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=franciscoryb1@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <franciscoryb1@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id in15-20020a17090b438f00b00299354d316esor294326pjb.4.2024.02.16.12.10.55
+        for <rodriguezybarrosfrancisco@gmail.com>
+        (Google Transport Security);
+        Fri, 16 Feb 2024 12:10:55 -0800 (PST)
+Received-SPF: pass (google.com: domain of franciscoryb1@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=hXfa1p+Y;
+       spf=pass (google.com: domain of franciscoryb1@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=franciscoryb1@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1708114255; x=1708719055; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=EjKY8AxOitR970Zrj4LrUaAaLqvkjQuUfIoG0QDJdbg=;
+        b=hXfa1p+Y6/mWrLEBxGDxBVDVZ/VjZtnXUfGDQjtThHHk53mEQQvq1f17l+ghG82KnZ
+         81Xw9T2E1hHcWg8cz6n6eczisYyolr4YcBK/6oP16HkJ+arddIX5a2mdANi+DVxwF9Ez
+         QOXF1mdG6/rcfRJFBvslSEBZVp05oXo9jDEvH0eQNETzM8lqAP9fpoMOcRRrNqKjwvpM
+         0npKRcOpbejkJ1d7ahJ0DJAHWvQtiL4QJMQ+mgODvbogV4IMP1W8NLKYA8gN+2OXe+WF
+         wH2OC5aBzpgQFNgZV9h/2eSgID0ifG2m7CDacrW3UBlcIS/qXxeEFsQ8FmcD627tLrEd
+         pYWA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1708114255; x=1708719055;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=EjKY8AxOitR970Zrj4LrUaAaLqvkjQuUfIoG0QDJdbg=;
+        b=M54vHQrkTbIU6JVxQHt1UenA28f4rZtt4HdocyFujHLFsWhYPW76R6MjZr7E013TG3
+         KfC0ErMuxUBpoaiKKCFvs9xE2v/9ZAcoFNNfZO50QcvGrbCfV93S9znNBuS0+bWtKlhl
+         KaiUUUsI1tUP0EGjPbRxNmDZEVVHZmSNd6Isj3FfDZSS9qiF50aWjJ5BBLnCrinDy6J5
+         ogDSpz9EuMx5VmIeWJyioM1PXrgc+T9U10XY90uJ1FnXNqtHLx2bVAeXYcAOyizqY3oV
+         c3auuTJWUmkcTaTfQnHnTh9aRSnr7fiQNzhg/RnOX1Wq9ByRyEiVEriFgcr/s1BIRBQk
+         PvPA==
+X-Gm-Message-State: AOJu0YzvNPBTMUqQFBzv++IY0yg2mTxwiV800Br0oHWEQY+Oaqq92GwN
+	NFhXAJJp1OQKfgMOLK7R1R2nfqrkwI5OamfLmKrt3eVGmb4ShfAx2jR9xG/e+NFMT3e9mHV1AXk
+	D6K5QkbTtW2fN/Mcyqz7pUgTEguvKtlHDm14=
+X-Google-Smtp-Source: AGHT+IGMrCE5Y/m3Fz7hjA7mq+Kd8jbGD0xKqtRwD1N+kkEwWpZ5IbYrvZgiFm/SMtZN5mVPWTp07m1bLiaOtrF3/ac=
+X-Received: by 2002:a17:90b:1990:b0:299:48de:9c7a with SMTP id
+ mv16-20020a17090b199000b0029948de9c7amr1300907pjb.0.1708114255159; Fri, 16
+ Feb 2024 12:10:55 -0800 (PST)
+MIME-Version: 1.0
+From: Francisco Rodriguez y Barros <franciscoryb1@gmail.com>
+Date: Fri, 16 Feb 2024 17:10:42 -0300
+Message-ID: <CAL+uyQkgoWS_Xeeh4RqQkEnK2Qbg17_-=4iBAweAPKU2pMAHTA@mail.gmail.com>
+Subject: SALUDO
+To: "rodriguezybarrosfrancisco@gmail.com" <rodriguezybarrosfrancisco@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000006a246f06118557c9"
+
+--0000000000006a246f06118557c9
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hola,
+
+Espero que este correo te encuentre bien. Me complace invitarte a nuestra
+pr=C3=B3xima reuni=C3=B3n del equipo de proyecto que se llevar=C3=A1 a cabo=
+ el [fecha] a
+las [hora] en [lugar]. Esta reuni=C3=B3n ser=C3=A1 una excelente oportunida=
+d para
+discutir los avances del proyecto, revisar los pr=C3=B3ximos hitos y aborda=
+r
+cualquier problema que necesite nuestra atenci=C3=B3n.
+
+Por favor, confirma tu asistencia a m=C3=A1s tardar el [fecha de confirmaci=
+=C3=B3n]
+para que podamos asegurarnos de que todos los miembros del equipo est=C3=A9=
+n
+presentes. Adem=C3=A1s, si tienes alg=C3=BAn punto espec=C3=ADfico que te g=
+ustar=C3=ADa incluir
+en la agenda, no dudes en hac=C3=A9rmelo saber.
+
+Agradezco de antemano tu participaci=C3=B3n y contribuci=C3=B3n al =C3=A9xi=
+to continuo de
+nuestro proyecto. Si tienes alguna pregunta o inquietud antes de la
+reuni=C3=B3n, no dudes en comunicarte conmigo.
+
+=C2=A1Espero verte en la reuni=C3=B3n!
+
+Saludos cordiales,
+
+--0000000000006a246f06118557c9
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hola,<br><br>Espero que este correo te encuentre bien. Me =
+complace invitarte a nuestra pr=C3=B3xima reuni=C3=B3n del equipo de proyec=
+to que se llevar=C3=A1 a cabo el [fecha] a las [hora] en [lugar]. Esta reun=
+i=C3=B3n ser=C3=A1 una excelente oportunidad para discutir los avances del =
+proyecto, revisar los pr=C3=B3ximos hitos y abordar cualquier problema que =
+necesite nuestra atenci=C3=B3n.<br><br>Por favor, confirma tu asistencia a =
+m=C3=A1s tardar el [fecha de confirmaci=C3=B3n] para que podamos asegurarno=
+s de que todos los miembros del equipo est=C3=A9n presentes. Adem=C3=A1s, s=
+i tienes alg=C3=BAn punto espec=C3=ADfico que te gustar=C3=ADa incluir en l=
+a agenda, no dudes en hac=C3=A9rmelo saber.<br><br>Agradezco de antemano tu=
+ participaci=C3=B3n y contribuci=C3=B3n al =C3=A9xito continuo de nuestro p=
+royecto. Si tienes alguna pregunta o inquietud antes de la reuni=C3=B3n, no=
+ dudes en comunicarte conmigo.<br><br>=C2=A1Espero verte en la reuni=C3=B3n=
+!<br><br>Saludos cordiales,<br></div>
+
+--0000000000006a246f06118557c9--

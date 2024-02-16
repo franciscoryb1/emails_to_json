@@ -1,0 +1,142 @@
+Delivered-To: rodriguezybarrosfrancisco@gmail.com
+Received: by 2002:a05:6850:6b15:b0:554:6301:ee21 with SMTP id t21csp158162nnh;
+        Fri, 16 Feb 2024 12:13:54 -0800 (PST)
+X-Received: by 2002:a05:6a20:d80e:b0:19e:a2d5:2d7d with SMTP id iv14-20020a056a20d80e00b0019ea2d52d7dmr8182876pzb.37.1708114434069;
+        Fri, 16 Feb 2024 12:13:54 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1708114434; cv=none;
+        d=google.com; s=arc-20160816;
+        b=tLtMaYCbT6EezqldmUY0jXlS+HVZpxYhLvUStpv6e2R7byfMvp/QGynfyfqOLw6Zug
+         k+49g6Btpi2zz23oNqsj1Hx7oKUInQnbzMM+O6iD4n7Lvx6sDWnGhreU156Ks9If6Yu0
+         l5HWuGvJaYZ6T6cRbe+rDu2YuYz72Nepn/Cu/OdW+B+4Yvn8TPrd6QWoIKvONYG+ovFo
+         4MqC+TgbV9ra3KZTX+1Iz9GMpL861axgZ9iAGJro9NjKjjE9fAuabW5jnJmYBAE8Opb+
+         eoSkwKSaCTA6O8hzjTHQAYjX9iUkswKspj7qtwM+niAvUd7uqnfoH8I3/2F5tqueD2WD
+         xYrg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=d9BiSoZqe3HR0MVe3W0cQUn3EwnIX2B04IdzADn3+Cw=;
+        fh=GuoonK3VndkbjaNRexh8CadKCaGSBtWrW/qjOpWzR0c=;
+        b=E1xesrxvbVzRxR5AL8sdVanM7mKh7MGKNBm2ijZmlFGkoRXpY2KQj+wpzeDIDdEK6z
+         DAugq/RwtS0jxj+V0pqeQ3uxUf9r8l4OyAnTyBzPIZgR0r+DHB8PuNJXhOe5Y62vXQh8
+         mYSprxkC/2GFNzuDTS36WiWrve+oUCga5biDwXjihrn5brKqURnmF1RGm1tnIdGYcxuT
+         SjmSAYuvwHM7z94wJlqEfls01urQkIqxdjyqit3OyWyrkUf3nSRg8bsi7o5ZgjWRSfGn
+         gKhzohOYMgu2T8a4dFnUTmNzN0nOQmAkdW1uPtsMtpz942qJtrrJ+RKTrCMFW/hluvta
+         p6tA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=MFO2pHXV;
+       spf=pass (google.com: domain of franciscoryb1@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=franciscoryb1@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <franciscoryb1@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id dr17-20020a056a020fd100b005dc9621da38sor302304pgb.6.2024.02.16.12.13.53
+        for <rodriguezybarrosfrancisco@gmail.com>
+        (Google Transport Security);
+        Fri, 16 Feb 2024 12:13:54 -0800 (PST)
+Received-SPF: pass (google.com: domain of franciscoryb1@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=MFO2pHXV;
+       spf=pass (google.com: domain of franciscoryb1@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=franciscoryb1@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1708114433; x=1708719233; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=d9BiSoZqe3HR0MVe3W0cQUn3EwnIX2B04IdzADn3+Cw=;
+        b=MFO2pHXVjKBOAbXpnI6We0ZXxTgXBjyv0R5yzbbEY9QHBmYooYGWWy2ul8SnbfO7VL
+         w2M6CI8mnBICNBzsMzlvl0kAQH45Mf5dn2VmFTlRSYB8e8jZFTEODwsqwJ9RVvNJYvby
+         kj7juKdYaTu9sdT87ZTnNDhyQNBZ664y405Fj/KsWPSWZuGptTE8JwqMhyYQH9ONJ7YN
+         MHOY4+4sMRRSnT9gnbAkJNW5aJQjrexzAsa/0V9PN93eZQRo/6eLamyZBuGAdDw6C2TR
+         QEUb4vkCUo2dboCe0kouPXfEM6D1goqyUFDFCi/T93ChcIe0HYjuBYOPBtHReNUlmo7G
+         zaBw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1708114433; x=1708719233;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=d9BiSoZqe3HR0MVe3W0cQUn3EwnIX2B04IdzADn3+Cw=;
+        b=U9Kz4MGkL/DefIalKsZ5i7PcSAgoeCUulvF9mfdyQUs0K4BctFtBItCwbm4Kgiq4lD
+         zemVQ5xYKtkYau2HCAt9Z9hnMBWNaO8D8dtaaFFN2byDMoq8eLpVNty+TaH6+gcVFr74
+         vyg1aE4EFYagv6zNvFrnBMYQrRsl3DLFi35C/BIHzo4FDppZlo4PCQvUZZx22u6izUoM
+         pcXLP7glwBK07qktWN7hfxWO2Lq1lM5iCCIy502JVczNK06CeNevAF4p8H8aZG8awM15
+         jwfv8EBOahMQaiqLojKJMADVapzwcNvShT+jspWTDNfUOTYEp/qddXpzHqCjYRWMYXZF
+         lVoA==
+X-Gm-Message-State: AOJu0Yz5zNV2V9w1zLibwFnoPbfhUZv6n5UDuedWoFyGkhk5uFAzs1FM
+	+HBYnoUpymQagp6EIjn3GNKKM5a3gzKb1RhqyK0Ph9fhK9So73czTzYZ0qZEchVgq542ldTjqnq
+	3fF5paOzfqKKB6W4EqfhReUY5jXfu8dM0uME=
+X-Google-Smtp-Source: AGHT+IFRxw+PcKxvCaZtO+XfbiWOqRokiCizCGPdAC3tZOEhvbVTH0IdhdgdSIFz97/TMLrameiZla5BJ2/o9DYsWC0=
+X-Received: by 2002:a17:90a:6ba7:b0:299:1bf1:9351 with SMTP id
+ w36-20020a17090a6ba700b002991bf19351mr4554608pjj.29.1708114433088; Fri, 16
+ Feb 2024 12:13:53 -0800 (PST)
+MIME-Version: 1.0
+From: Francisco Rodriguez y Barros <franciscoryb1@gmail.com>
+Date: Fri, 16 Feb 2024 17:13:41 -0300
+Message-ID: <CAL+uyQ=Nw01AW8QAUux_BfLtux+76sTMHg_Cqnif1=6okjf5wA@mail.gmail.com>
+Subject: VIAJE
+To: "rodriguezybarrosfrancisco@gmail.com" <rodriguezybarrosfrancisco@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000005228606118562ed"
+
+--00000000000005228606118562ed
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Por supuesto, aqu=C3=AD tienes otro ejemplo con nombres y datos ficticios:
+
+Asunto: Confirmaci=C3=B3n de Reserva para el Viaje de Negocios
+
+Hola Emily,
+
+Espero que este correo te encuentre bien. Me complace confirmar que hemos
+completado la reserva para tu pr=C3=B3ximo viaje de negocios a Barcelona en
+nombre de Acme Corporation.
+
+A continuaci=C3=B3n, te proporciono los detalles de tu reserva:
+
+Fecha de salida: 10 de marzo de 2024
+Fecha de regreso: 15 de marzo de 2024
+Vuelo de ida: Vuelo AC123, salida a las 10:00 desde Nueva York (JFK) y
+llegada a Barcelona (BCN) a las 14:30.
+Vuelo de regreso: Vuelo AC456, salida a las 15:45 desde Barcelona (BCN) y
+llegada a Nueva York (JFK) a las 20:15.
+Hotel: Hotel Estrella, Carrer de Mallorca 123, Barcelona, del 10 de marzo
+al 15 de marzo de 2024.
+Por favor, revisa esta informaci=C3=B3n y aseg=C3=BArate de que todo est=C3=
+=A9 correcto.
+Si necesitas realizar alguna modificaci=C3=B3n o tienes alguna solicitud
+especial, no dudes en hac=C3=A9rmelo saber lo antes posible para que podamo=
+s
+gestionarlo.
+
+Adem=C3=A1s, adjunto encontrar=C3=A1s el itinerario completo del viaje para=
+ tu
+referencia.
+
+Si tienes alguna pregunta o necesitas m=C3=A1s asistencia, estoy aqu=C3=AD =
+para
+ayudarte. =C2=A1Que tengas un excelente viaje!
+
+Saludos cordiales.
+
+--00000000000005228606118562ed
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br>Por supuesto, aqu=C3=AD tienes otro ejemplo con nombre=
+s y datos ficticios:<br><br>Asunto: Confirmaci=C3=B3n de Reserva para el Vi=
+aje de Negocios<br><br>Hola Emily,<br><br>Espero que este correo te encuent=
+re bien. Me complace confirmar que hemos completado la reserva para tu pr=
+=C3=B3ximo viaje de negocios a Barcelona en nombre de Acme Corporation.<br>=
+<br>A continuaci=C3=B3n, te proporciono los detalles de tu reserva:<br><br>=
+Fecha de salida: 10 de marzo de 2024<br>Fecha de regreso: 15 de marzo de 20=
+24<br>Vuelo de ida: Vuelo AC123, salida a las 10:00 desde Nueva York (JFK) =
+y llegada a Barcelona (BCN) a las 14:30.<br>Vuelo de regreso: Vuelo AC456, =
+salida a las 15:45 desde Barcelona (BCN) y llegada a Nueva York (JFK) a las=
+ 20:15.<br>Hotel: Hotel Estrella, Carrer de Mallorca 123, Barcelona, del 10=
+ de marzo al 15 de marzo de 2024.<br>Por favor, revisa esta informaci=C3=B3=
+n y aseg=C3=BArate de que todo est=C3=A9 correcto. Si necesitas realizar al=
+guna modificaci=C3=B3n o tienes alguna solicitud especial, no dudes en hac=
+=C3=A9rmelo saber lo antes posible para que podamos gestionarlo.<br><br>Ade=
+m=C3=A1s, adjunto encontrar=C3=A1s el itinerario completo del viaje para tu=
+ referencia.<br><br>Si tienes alguna pregunta o necesitas m=C3=A1s asistenc=
+ia, estoy aqu=C3=AD para ayudarte. =C2=A1Que tengas un excelente viaje!<br>=
+<br>Saludos cordiales.<br></div>
+
+--00000000000005228606118562ed--

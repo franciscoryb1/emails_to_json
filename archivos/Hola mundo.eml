@@ -1,0 +1,87 @@
+Delivered-To: rodriguezybarrosfrancisco@gmail.com
+Received: by 2002:a05:6851:2626:b0:554:6301:ee21 with SMTP id to38csp863438nnb;
+        Thu, 15 Feb 2024 14:51:52 -0800 (PST)
+X-Received: by 2002:a05:600c:19c7:b0:412:3bff:a813 with SMTP id u7-20020a05600c19c700b004123bffa813mr307970wmq.10.1708037512282;
+        Thu, 15 Feb 2024 14:51:52 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1708037512; cv=none;
+        d=google.com; s=arc-20160816;
+        b=wHmSd6uzlfSQ/S3oMokQuVa+nYvMIsNq/6FqSWIafagZ1EkS2ZFl9vdKxeo5zL0tL4
+         WLswIwV7WnRpip9rNm7ue/zmknOv5mDK95YRzrOzaelQaGph918+7eFXs++ZkcGezPS5
+         rB6VK0EYMj9q6spEFkErGbNiYGxfKwEcAEUPFdEv70HXIBnbNa7D6GSXvn1cgAIi2ibL
+         IeGUjRFIDI6ZPxvvYjzttLB+zN3fSkrOnlXWhWY6CvT0Qa1WicdrSffANI0Neg1XO0AB
+         ikkzdcg8JVHs7HnqcUHeLxfUDK6vT2HR4FDKwNW4fXXL42jX0NC2agAw8gBrYLBYS2S8
+         KLJA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=lzr9IQvS7rrIkbe/CMpEIDp+Q7QC+pzwpd2yKhVYkhU=;
+        fh=C6Umu4f4vu48QFrgD5PhGSfyQ+sFM7IUTy2d+oNKe/A=;
+        b=rGeRi5Ykd0cVfYf+S6Q99GuMAaZHcKic528kosxEiJM5PmA7N+Sg+FNUKzYpmuorEt
+         1KtMtxx/GYAQLEXEm59/pdMoarijq/jva3VcAxBiJqb4Wbbp+AS9/9D1Z3/nNszdYoN8
+         etzJl/RcvX2TZoZtnV/aLbJu6RgLugqHSjS/xgU13/ECwmSjvHYI3Py39NlGyCuKuFYV
+         YoIcuXL5uvvtObzhxtDXdcyTebbkjiOz1/g8C8JlHmYfUEIoQYdAKLYyw4Gi8KAcw9se
+         hDJVnrR8GYyDbu4TSLXwlt1BVtU5Iu7JQwlurGTWjSKd+5pOuSm4ELvaHkou0T1OpnGG
+         D33Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="bScj/dyy";
+       spf=pass (google.com: domain of documentostuia@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=documentostuia@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <documentostuia@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 3-20020a05600c234300b00410abb8a0c8sor104393wmq.13.2024.02.15.14.51.52
+        for <rodriguezybarrosfrancisco@gmail.com>
+        (Google Transport Security);
+        Thu, 15 Feb 2024 14:51:52 -0800 (PST)
+Received-SPF: pass (google.com: domain of documentostuia@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b="bScj/dyy";
+       spf=pass (google.com: domain of documentostuia@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=documentostuia@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1708037511; x=1708642311; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=lzr9IQvS7rrIkbe/CMpEIDp+Q7QC+pzwpd2yKhVYkhU=;
+        b=bScj/dyykmrm0gou2eccoa5EXfwrGNjWCGXEMD42P5Pww0rWXBJq/a9GcOJVIk9smH
+         fCeolSr6PKuxlKPO0KZ4CLY1FD8wXX2ZJ7G8At2+IBs8E9UQhw1m6f3wdQieiB8BY2zs
+         n2FZakJz4yLA0fwUAi3GXfgtmNyG5CLpWmgHpIQAo5hctxvK7+diKH6BDlryyZNEP7wo
+         +7v2SNwZpxoZWPCWJ42W614egAHdxlR8zzmYnJtT+bbkBwXDNFL1pRCkrHbVcnXTF6ET
+         MqyGkvpxvJQ8AudKqJANhHUGBBsDs9uTPHuF9SEatIupiJqOBwPzSwgi2ViHCNT7PYqJ
+         9ZBw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1708037511; x=1708642311;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=lzr9IQvS7rrIkbe/CMpEIDp+Q7QC+pzwpd2yKhVYkhU=;
+        b=ZBHmMA1y5/PJgLl7pkbbYg/zYK4DaW1WljGkT72nfu/xBcpFyRd7a5ammSy2ZgAR+1
+         1TuZ6PK9/sxFi+5w0nw2jQjUOVzOtu5OaZWTYGpBkW0Dv6oG4sNu7FlF5FfBi1MLtUbt
+         piBMzums73NIW/MnrsJ0UU4r5cre9mxLDFl2MFXHaOOMRXmEDhe6PbBhE9qGth7efDY7
+         lRFaF2/M5km9c7z09yLKFen86HKO9RNWLVLsov5uZ6+W1Xb125ZpD9apFaoWT0IYx33o
+         BbSxtGfj25bqPQMiPKtkKPOOBHbTL9fQwuRYC3Wk6XnIgIee7P3TWFnLYHh38HXAuGYr
+         2RhQ==
+X-Gm-Message-State: AOJu0YzRVcIJjW1o6Y6OWgaNyNsBoseKWi5ifgdPYgh8ojmO3OtLajZm
+	ZAdGKyMO4TjtYOEpMWo5xM0oinhPy5NUZo9B9nkqjJRDEZjy5rq2etCXQXCGQVvRFnORZMx1/ej
+	wJ2/GqWKfjPUBkqN56YIQsLIaYn7CQhqg
+X-Google-Smtp-Source: AGHT+IFD4cgY8c0M2vegWUBpd9Ng/FESVUXTxiP/2EtfbQxTWut0JVwfexKvl9Y5C04dAXopjcQ9GzLnvLLy/cMCzMo=
+X-Received: by 2002:adf:f5cb:0:b0:33b:792c:47fa with SMTP id
+ k11-20020adff5cb000000b0033b792c47famr2033409wrp.37.1708037511422; Thu, 15
+ Feb 2024 14:51:51 -0800 (PST)
+MIME-Version: 1.0
+From: Francisco Rodriguez y Barros <documentostuia@gmail.com>
+Date: Thu, 15 Feb 2024 19:51:40 -0300
+Message-ID: <CAM3_chcZo5LP7xL6yjM+6NX5YjTL-MA1qaQM9BKXgRX-giAciQ@mail.gmail.com>
+Subject: Hola mundo
+To: rodriguezybarrosfrancisco@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000021a482061173795e"
+
+--00000000000021a482061173795e
+Content-Type: text/plain; charset="UTF-8"
+
+Hola probando !!
+
+--00000000000021a482061173795e
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">Hola probando !!</div>
+
+--00000000000021a482061173795e--
